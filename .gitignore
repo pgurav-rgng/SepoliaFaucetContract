@@ -1,0 +1,22 @@
+# Always ignore sensitive and environment-specific files
+.env
+
+# Ignore everything by default
+*
+
+# Allow folders and their contents
+!scripts/
+!scripts/**
+
+!contracts/
+!contracts/**
+
+!test/
+!test/**
+
+# Allow config and essential files
+!hardhat.config.js
+!package.json
+!package-lock.json
+!.gitignore
+
