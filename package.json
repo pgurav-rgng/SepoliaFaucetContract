@@ -1,5 +1,5 @@
 {
-  "name": "faucetbydeepseek",
+  "name": "sepoliafaucetcontract",
   "version": "1.0.0",
   "main": "hardhat.config.js",
   "directories": {
