@@ -21,5 +21,12 @@ module.exports = {
   },
   etherscan: {
     apiKey: process.env.ETHER_SCAN_API_KEY
-  }
+  },
+  // Your existing Hardhat config (networks, solidity, etc.)
+  mocha: {
+    timeout: 40000,     // Global timeout (40 seconds, useful for slow RPC)
+    color: true,        // Colorize output
+    reporter: "spec",   // Clean test reporting ("spec" is default)
+    bail: true,         // Stop after first test failure (optional)
+  },
 };
