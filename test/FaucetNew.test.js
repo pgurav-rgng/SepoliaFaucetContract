@@ -117,17 +117,6 @@ describe.only("Faucet Contract", function () {
   });
 
   describe.only("Owner Withdrawals", function () {
-    beforeEach(async () => {
-      [owner] = await ethers.getSigners();
-      const Faucet = await ethers.getContractFactory("Faucet");
-      faucet = await Faucet.deploy();
-      await faucet.waitForDeployment();
-      await owner.sendTransaction({
-        to: await faucet.getAddress(),
-        value: ethers.parseEther("2"),
-      });
-    });
-
     it("Should allow owner to withdraw all funds", async function () {
       const contractAddress = await faucet.getAddress();
       const initialContractBalance = await ethers.provider.getBalance(
